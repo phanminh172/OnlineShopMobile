@@ -1,4 +1,5 @@
-﻿using Models.Framework;
+﻿using Models.Dao;
+using Models.Framework;
 using OnlineShopMobile.Models;
 using System;
 using System.Collections.Generic;
@@ -35,7 +36,7 @@ namespace OnlineShopMobile.Controllers
                 {
                     var user = new User();
                     user.Name = model.Name;
-                    user.Password = Encryptor.MD5Hash(model.Password);
+                    //user.Password = Encryptor.MD5Hash(model.Password);
                     user.Phone = model.Phone;
                     user.Email = model.Email;
                     user.Address = model.Address;
